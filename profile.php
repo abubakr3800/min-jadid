@@ -28,6 +28,11 @@ if (!$user) {
 // Get user's posts
 $userPosts = $db->getPosts(['userId' => $userId]);
 
+// Get services
+$servicesFile = 'data/services.json';
+$allServices = file_exists($servicesFile) ? json_decode(file_get_contents($servicesFile), true) : [];
+$userServices = array_filter($allServices, function($srv) use ($userId) { return $srv['userId'] == $userId; });
+
 // Check if current user is viewing their own profile
 $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
 ?>
@@ -68,6 +73,98 @@ $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
                     <?php if ($auth->isLoggedIn()): ?>
                         <li><a href="new-post.php" class="nav-link">مقال جديد</a></li>
                         <li><a href="profile.php" class="nav-link active">الملف الشخصي</a></li>
+                        <!-- Notification Bell -->
+                        <?php if ($isOwnProfile): ?>
+                        <?php 
+                            $notifications = $db->getUserNotifications($userId);
+                            $unreadCount = 0;
+                            foreach ($notifications as $notif) { if (!$notif['read']) $unreadCount++; }
+                        ?>
+                        <li class="nav-link notification-bell-wrapper" style="position:relative;">
+                            <a href="#" id="notifBell" onclick="event.preventDefault(); document.getElementById('notifDropdown').classList.toggle('show');">
+                                <i class="fas fa-bell"></i>
+                                <?php if ($unreadCount > 0): ?>
+                                <span class="notif-badge"><?= $unreadCount ?></span>
+                                <?php endif; ?>
+                            </a>
+                            <div id="notifDropdown" class="notif-dropdown">
+                                <div class="notif-dropdown-header">الإشعارات</div>
+                                <?php if (empty($notifications)): ?>
+                                    <div class="notif-empty">لا توجد إشعارات جديدة</div>
+                                <?php else: ?>
+                                    <ul class="notif-list">
+                                        <?php foreach (array_slice($notifications, 0, 8) as $notif): ?>
+                                        <li class="notif-item<?= !$notif['read'] ? ' unread' : '' ?>">
+                                            <a href="<?= htmlspecialchars($notif['link']) ?>">
+                                                <i class="fas fa-bell"></i>
+                                                <?= htmlspecialchars($notif['message']) ?>
+                                                <span class="notif-date"><?= date('Y/m/d', strtotime($notif['createdAt'])) ?></span>
+                                            </a>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                                <div class="notif-dropdown-footer" style="text-align:center; padding:0.5rem 1rem;">
+                                    <a href="notifications.php" class="btn btn-link" style="color:#4f8cff; font-weight:bold;">عرض كل الإشعارات</a>
+                                </div>
+                            </div>
+                        </li>
+                        <style>
+                        .notification-bell-wrapper { position: relative; }
+                        .notification-bell-wrapper .fa-bell { font-size: 1.3rem; }
+                        .notif-badge {
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            background: #ff5252;
+                            color: #fff;
+                            border-radius: 50%;
+                            font-size: 0.7rem;
+                            padding: 2px 6px;
+                            font-weight: bold;
+                        }
+                        .notif-dropdown {
+                            display: none;
+                            position: absolute;
+                            right: 0;
+                            top: 2.2rem;
+                            background: #fff;
+                            min-width: 270px;
+                            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+                            border-radius: 12px;
+                            z-index: 1000;
+                            padding: 0.5rem 0;
+                        }
+                        .notif-dropdown.show { display: block; }
+                        .notif-dropdown-header {
+                            font-weight: bold;
+                            padding: 0.5rem 1rem;
+                            border-bottom: 1px solid #eee;
+                            color: #4f8cff;
+                        }
+                        .notif-empty {
+                            padding: 1rem;
+                            text-align: center;
+                            color: #888;
+                        }
+                        .notif-list { list-style: none; margin: 0; padding: 0; }
+                        .notif-item { padding: 0.7rem 1rem; border-bottom: 1px solid #f3f3f3; }
+                        .notif-item.unread { background: #f0f6ff; font-weight: bold; }
+                        .notif-item:last-child { border-bottom: none; }
+                        .notif-item a { color: #222; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+                        .notif-item .fa-bell { color: #4f8cff; }
+                        .notif-date { font-size: 0.8rem; color: #888; margin-right: auto; }
+                        </style>
+                        <script>
+                        document.addEventListener('click', function(e) {
+                            var bell = document.getElementById('notifBell');
+                            var dropdown = document.getElementById('notifDropdown');
+                            if (!bell.contains(e.target) && !dropdown.contains(e.target)) {
+                                dropdown.classList.remove('show');
+                            }
+                        });
+                        </script>
+                        <?php endif; ?>
                         <li><a href="logout.php" class="btn btn-outline-primary">تسجيل الخروج</a></li>
                     <?php else: ?>
                         <li><a href="login.php" class="nav-link">تسجيل الدخول</a></li>
@@ -136,6 +233,10 @@ $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
                                                     <i class="fas fa-edit"></i>
                                                     تعديل الملف الشخصي
                                                 </a>
+                                                <a href="add-service.php" class="btn btn-success">
+                                                    <i class="fas fa-plus"></i>
+                                                    إضافة خدمة
+                                                </a>
                                             </div>
                                         <?php endif; ?>
                                     </div>
@@ -143,6 +244,55 @@ $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
                             </div>
                         </div>
                     </div>
+                </section>
+
+                
+                <!-- خدمات المستخدم -->
+                <section class="user-services mt-xl">
+                    <div class="section-header">
+                        <h2 class="section-title">الخدمات المقدمة</h2>
+                        <p class="section-subtitle">الخدمات التي يقدمها <?= htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) ?></p>
+                    </div>
+                    <?php if (empty($userServices)): ?>
+                        <div class="empty-state text-center py-lg">
+                            <div class="empty-icon mb-md">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>لا توجد خدمات مضافة</h3>
+                            <?php if ($isOwnProfile): ?>
+                                <a href="add-service.php" class="btn btn-success mt-md">
+                                    <i class="fas fa-plus"></i> أضف خدمة جديدة
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="cards-grid">
+                            <?php foreach ($userServices as $srv): ?>
+                                <div class="card post-card fade-in-up" style="position:relative;">
+                                    <?php if (!empty($srv['image'])): ?>
+                                        <img src="<?= htmlspecialchars($srv['image']) ?>" alt="صورة الخدمة" style="width:100%;max-height:180px;object-fit:cover;border-radius:12px 12px 0 0;">
+                                    <?php endif; ?>
+                                    <div class="card-body">
+                                        <h3 class="post-title" style="font-size:1.3rem;"> <?= htmlspecialchars($srv['title']) ?> </h3>
+                                        <p class="card-text"> <?= nl2br(htmlspecialchars($srv['desc'])) ?> </p>
+                                        <div class="post-meta" style="margin-bottom:1rem;">
+                                            <span class="badge bg-success" style="font-size:1rem;"> <?= number_format($srv['price']) ?> جنيه مصري </span>
+                                            <span class="text-muted" style="font-size:0.9rem;float:left;"> <?= date('Y/m/d', strtotime($srv['createdAt'])) ?> </span>
+                                        </div>
+                                        <?php if ($isOwnProfile): ?>
+                                        <div style="display:flex;gap:0.5rem;">
+                                            <a href="edit-service.php?id=<?= $srv['id'] ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> تعديل</a>
+                                            <form method="post" action="" onsubmit="return confirm('هل أنت متأكد من حذف هذه الخدمة؟');" style="display:inline;">
+                                                <input type="hidden" name="delete_service_id" value="<?= $srv['id'] ?>">
+                                                <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> حذف</button>
+                                            </form>
+                                        </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </section>
 
                 <!-- مقالات المستخدم -->
@@ -228,6 +378,7 @@ $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
                         </div>
                     <?php endif; ?>
                 </section>
+
             </div>
         </main>
 
@@ -1312,4 +1463,20 @@ $isOwnProfile = $auth->isLoggedIn() && $auth->getCurrentUserId() == $userId;
     }
     </style>
 </body>
-</html> 
+</html>
+
+<?php
+// حذف الخدمة إذا تم إرسال الطلب
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_service_id']) && $isOwnProfile) {
+    $deleteId = (int)$_POST['delete_service_id'];
+    $allServices = file_exists($servicesFile) ? json_decode(file_get_contents($servicesFile), true) : [];
+    $allServices = array_filter($allServices, function($srv) use ($deleteId, $currentUser) {
+        // فقط صاحب الخدمة يمكنه حذفها
+        return !($srv['id'] == $deleteId && $srv['userId'] == $currentUser['id']);
+    });
+    file_put_contents($servicesFile, json_encode(array_values($allServices), JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+    // إعادة تحميل الصفحة بعد الحذف
+    echo '<meta http-equiv="refresh" content="0">';
+    exit;
+}
+?> 

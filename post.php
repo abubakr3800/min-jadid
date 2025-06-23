@@ -1611,16 +1611,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rating'])) {
             </div>
             
             <!-- Author-only Actions -->
-            <?php if ($isLoggedIn && $post['userId'] == $currentUser['id']): ?>
-                            <div class="post-author-actions" style="padding: 2rem 3rem; border-top: 2px dashed #eee; display: flex; gap: 1rem; align-items: center; justify-content: center; background: #f8f9fa;">
-                <a href="edit-post.php?id=<?= $postId ?>" class="btn btn-warning">
-                    <i class="fas fa-edit"></i> تعديل المقال
-                </a>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal">
-                    <i class="fas fa-trash"></i> حذف المقال
-                </button>
-            </div>
-            <?php endif; ?>
+            
                         </article>
             
             <!-- Author Section -->
@@ -2046,12 +2037,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rating'])) {
                 deleteBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الحذف...';
                 deleteBtn.disabled = true;
                 
-                fetch('api/delete-post.php', {
+                fetch('api/posts.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
+                        action: 'delete',
                         postId: postId
                     })
                 })
@@ -2063,7 +2055,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rating'])) {
                             window.location.href = 'index.php';
                         }, 1500);
                     } else {
-                        showToast('خطأ: ' + (data.error || 'فشل في حذف المقال'), 'error');
+                        // تخصيص رسالة الخطأ إذا لم يكن المستخدم هو المؤلف
+                        if (data.error && data.error.includes('غير مصرح لك بحذف هذا المقال')) {
+                            showToast('لا يمكنك حذف هذا المقال لأنك لست المؤلف.', 'error');
+                        } else {
+                            showToast('خطأ: ' + (data.error || 'فشل في حذف المقال'), 'error');
+                        }
                         deleteBtn.innerHTML = originalText;
                         deleteBtn.disabled = false;
                     }

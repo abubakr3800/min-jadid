@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "userId": "4",
+        "title": "creating websites",
+        "desc": "creating website with php and bootstrap",
+        "price": "10000",
+        "image": "img\/uploads\/service_1750690640_5280.jpg",
+        "createdAt": "2025-06-23T16:57:20+02:00"
+    }
+]

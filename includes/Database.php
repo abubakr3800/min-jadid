@@ -825,5 +825,14 @@ class Database {
         }
         $this->writeJsonFile('notifications.json', $notifications);
     }
+
+    // Delete a notification for a user
+    public function deleteNotification($notifId, $userId) {
+        $notifications = $this->readJsonFile('notifications.json');
+        $notifications = array_filter($notifications, function($n) use ($notifId, $userId) {
+            return !($n['id'] === $notifId && $n['userId'] == $userId);
+        });
+        $this->writeJsonFile('notifications.json', array_values($notifications));
+    }
 }
 ?> 

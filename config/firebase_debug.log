@@ -2304,3 +2304,43 @@ likePost: Client error: `GET https://your-project-id.firebaseio.com/https://your
 2025-06-23 16:05:44 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
 2025-06-23 16:05:46 - dbGet result: null
 2025-06-23 16:05:46 - getPosts result count: 0
+2025-06-23 16:13:43 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 16:13:43 - getPosts: limit=12, category=
+2025-06-23 16:13:43 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 16:13:46 - dbGet result: null
+2025-06-23 16:13:46 - getPosts result count: 0
+2025-06-23 16:39:28 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 16:39:28 - getPosts: limit=12, category=
+2025-06-23 16:39:28 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 16:39:31 - dbGet result: null
+2025-06-23 16:39:31 - getPosts result count: 0
+2025-06-23 17:07:34 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 17:07:34 - getPosts: limit=12, category=
+2025-06-23 17:07:34 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 17:07:37 - dbGet result: null
+2025-06-23 17:07:37 - getPosts result count: 0
+2025-06-23 18:06:37 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 18:06:37 - getPosts: limit=12, category=
+2025-06-23 18:06:37 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 18:06:49 - dbGet result: null
+2025-06-23 18:06:49 - getPosts result count: 0
+2025-06-23 18:07:31 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 18:07:31 - getPosts: limit=12, category=
+2025-06-23 18:07:31 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 18:07:33 - dbGet result: null
+2025-06-23 18:07:33 - getPosts result count: 0
+2025-06-23 18:09:34 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 18:09:34 - getPosts: limit=12, category=
+2025-06-23 18:09:34 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 18:09:44 - dbGet result: null
+2025-06-23 18:09:44 - getPosts result count: 0
+2025-06-23 18:09:54 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 18:09:54 - getPosts: limit=12, category=
+2025-06-23 18:09:54 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 18:09:56 - dbGet result: null
+2025-06-23 18:09:56 - getPosts result count: 0
+2025-06-23 18:10:01 - FirebaseConfig initialized with database URL: https://min-jaded-default-rtdb.firebaseio.com
+2025-06-23 18:10:01 - getPosts: limit=12, category=
+2025-06-23 18:10:01 - dbGet: https://min-jaded-default-rtdb.firebaseio.com/posts?orderBy="createdAt".json
+2025-06-23 18:10:04 - dbGet result: null
+2025-06-23 18:10:04 - getPosts result count: 0

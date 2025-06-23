@@ -1412,3 +1412,237 @@ Array
 )
 
 ---
+2025-06-23T16:23:13+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-23T16:26:45+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-23T16:30:04+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-23T16:30:18+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-23T16:32:19+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-23T16:39:06+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => POST
+)
+
+---

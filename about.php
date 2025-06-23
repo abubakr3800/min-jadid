@@ -37,6 +37,32 @@ $authorsCount = count($authorIds);
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+    .share-btn-facebook {
+        background: linear-gradient(135deg, #1877f2 0%, #4e54c8 100%) !important;
+        color: #fff !important;
+        border: none;
+    }
+    .share-btn-facebook:hover { filter: brightness(1.1); }
+    .share-btn-whatsapp {
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+        color: #fff !important;
+        border: none;
+    }
+    .share-btn-whatsapp:hover { filter: brightness(1.1); }
+    .share-btn-instagram {
+        background: linear-gradient(45deg, #fd5d47 0%, #fcb045 25%, #fd1d1d 50%, #833ab4 75%, #5851db 100%) !important;
+        color: #fff !important;
+        border: none;
+    }
+    .share-btn-instagram:hover { filter: brightness(1.1); }
+    .share-btn-twitter {
+        background: linear-gradient(135deg, #1da1f2 0%, #0e71c8 100%) !important;
+        color: #fff !important;
+        border: none;
+    }
+    .share-btn-twitter:hover { filter: brightness(1.1); }
+    </style>
 </head>
 <body>
     <div class="page-wrapper">
@@ -73,6 +99,23 @@ $authorsCount = count($authorIds);
                 <div class="container text-center">
                     <h1 class="hero-title typewriter">عن منصة من جديد</h1>
                     <p class="hero-subtitle fade-in-up">منصة عربية ملهمة لمشاركة الأفكار والاقتباسات والتطوير الشخصي</p>
+                    
+                    <!-- Sharing Buttons -->
+                    <div class="hero-actions fade-in-up" style="margin-top: 2rem; gap: 1rem; justify-content: center;">
+                        <button class="btn btn-primary share-btn-facebook" onclick="shareToFacebook()">
+                            <i class="fab fa-facebook-f"></i> شارك على فيسبوك
+                        </button>
+                        <button class="btn btn-success share-btn-whatsapp" onclick="shareToWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> شارك على واتساب
+                        </button>
+                        <button class="btn btn-danger share-btn-instagram" onclick="shareToInstagram()">
+                            <i class="fab fa-instagram"></i> شارك على انستغرام
+                        </button>
+                        <button class="btn btn-info share-btn-twitter" onclick="shareToTwitter()">
+                            <i class="fab fa-twitter"></i> شارك على تويتر
+                        </button>
+                    </div>
+                    <!-- <img src="img/logo.svg" alt="شعار من جديد" style="width: 60px; margin: 1.5rem auto 0; display: block; opacity: 0.85;" /> -->
                 </div>
             </section>
 
@@ -268,5 +311,56 @@ $authorsCount = count($authorIds);
     <!-- سكريبت JavaScript -->
     <script src="js/ui.js"></script>
     <script src="js/animations.js"></script>
+    <script>
+    // رسالة المشاركة الجاهزة
+    const shareUrl = 'https://min-jaded.ct.ws';
+    const logoUrl = 'https://min-jaded.ct.ws/img/logo.svg';
+    const shareText = `منصة من جديد: منصة عربية ملهمة لمشاركة الأفكار والاقتباسات والتطوير الشخصي.\n\nانضم إلينا وشارك إبداعك!\n🌐 ${shareUrl}\n#من_جديد #مقالات #إلهام #تطوير_ذاتي`;
+
+    function showShareCopiedToast() {
+        if (window.showToast) {
+            showToast('تم نسخ رسالة المشاركة إلى الحافظة!', 'success');
+        } else {
+            alert('تم نسخ رسالة المشاركة إلى الحافظة!');
+        }
+    }
+    function shareToFacebook() {
+        copyToClipboard(shareText + '\n' + shareUrl);
+        showShareCopiedToast();
+        const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+        window.open(url, '_blank');
+    }
+    function shareToWhatsApp() {
+        copyToClipboard(shareText + '\n' + shareUrl);
+        showShareCopiedToast();
+        const text = `${shareText}`;
+        const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+    }
+    function shareToInstagram() {
+        copyToClipboard(shareText + '\n' + shareUrl);
+        showShareCopiedToast();
+        alert('تم نسخ رسالة المشاركة! يمكنك لصقها في انستغرام.');
+    }
+    function shareToTwitter() {
+        copyToClipboard(shareText + '\n' + shareUrl);
+        showShareCopiedToast();
+        const text = `${shareText}`;
+        const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+        window.open(url, '_blank');
+    }
+    function copyToClipboard(text) {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text);
+        } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    }
+    </script>
 </body>
 </html> 

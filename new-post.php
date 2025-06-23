@@ -14,6 +14,38 @@ if (!$auth->isLoggedIn()) {
 $currentUser = $auth->getCurrentUser();
 $categories = $db->getCategories();
 $isLoggedIn = $auth->isLoggedIn();
+
+// Handle form submission
+$success = '';
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $title = trim($_POST['title'] ?? '');
+    $content = trim($_POST['content'] ?? '');
+    $categoryId = trim($_POST['categoryId'] ?? '');
+    $tags = trim($_POST['tags'] ?? '');
+    $tagsArr = array_filter(array_map('trim', explode(',', $tags)));
+
+    if ($title && $content && $categoryId) {
+        $postData = [
+            'title' => $title,
+            'content' => $content,
+            'categoryId' => $categoryId,
+            'tags' => $tagsArr,
+            'userId' => $currentUser['id'],
+            'status' => 'published',
+            'createdAt' => date('c')
+        ];
+        $newPost = $db->addPost($postData);
+        if ($newPost && isset($newPost['id'])) {
+            $success = 'تم نشر المقال بنجاح! سيتم تحويلك إلى صفحة المقال خلال ثوانٍ...';
+            echo '<meta http-equiv="refresh" content="5;url=post.php?id=' . $newPost['id'] . '">';
+        } else {
+            $error = 'حدث خطأ أثناء إضافة المقال. حاول مرة أخرى.';
+        }
+    } else {
+        $error = 'يرجى ملء جميع الحقول المطلوبة';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -443,6 +475,17 @@ $isLoggedIn = $auth->isLoggedIn();
                             </div>
                             
                             <div class="post-form-body">
+                                <!-- Show success or error message above the form -->
+                                <?php if (!empty($success)): ?>
+                                    <div class="alert alert-success text-center" style="margin: 2rem auto; max-width: 600px;">
+                                        <?= $success ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (!empty($error)): ?>
+                                    <div class="alert alert-danger text-center" style="margin: 2rem auto; max-width: 600px;">
+                                        <?= $error ?>
+                                    </div>
+                                <?php endif; ?>
                                 <form id="newPostForm" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label class="form-label" for="title">

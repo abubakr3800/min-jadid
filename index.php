@@ -252,6 +252,47 @@ if ($searchQuery !== '') {
                 </div>
             </section>
 
+            
+            <!-- Categories Section -->
+            <section class="categories-section py-lg">
+                <div class="container">
+                    <div class="section-header text-center mb-lg">
+                        <h2 class="section-title">تصفح حسب التصنيف</h2>
+                        <p class="section-subtitle">اكتشف المحتوى حسب اهتماماتك</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <?php foreach ($categories as $category): ?>
+                            <?php 
+                            $categoryPosts = $db->getPosts(['categoryId' => $category['id']]);
+                            $postCount = count($categoryPosts);
+                            ?>
+                            <div class="col-md-6 col-lg-4 mt-3">
+                                <div class="category-card h-100">
+                                    <div class="category-header">
+                                        <div class="category-icon" style="background-color: <?= $category['color'] ?>">
+                                            <i class="<?= $category['icon'] ?>"></i>
+                                        </div>
+                                        <div class="category-count">
+                                            <span class="count-number"><?= $postCount ?></span>
+                                            <span class="count-label">مقال</span>
+                                        </div>
+                                    </div>
+                                    <div class="category-body">
+                                        <h3 class="category-name"><?= htmlspecialchars($category['name']) ?></h3>
+                                        <a href="explore.php?category=<?= $category['id'] ?>" class="btn btn-sm btn-outline-primary mt-3">
+                                            <i class="fas fa-arrow-left me-1"></i>
+                                            تصفح التصنيف
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+
+            
             <!-- Search box above articles -->
             <div class="container mb-4">
                 <form method="GET" class="search-form" style="max-width: 400px; margin: 2rem auto 2rem auto;">
@@ -388,44 +429,6 @@ if ($searchQuery !== '') {
                 </div>
             </section>
 
-            <!-- Categories Section -->
-            <section class="categories-section py-lg">
-                <div class="container">
-                    <div class="section-header text-center mb-lg">
-                        <h2 class="section-title">تصفح حسب التصنيف</h2>
-                        <p class="section-subtitle">اكتشف المحتوى حسب اهتماماتك</p>
-                    </div>
-
-                    <div class="row g-4">
-                        <?php foreach ($categories as $category): ?>
-                            <?php 
-                            $categoryPosts = $db->getPosts(['categoryId' => $category['id']]);
-                            $postCount = count($categoryPosts);
-                            ?>
-                            <div class="col-md-6 col-lg-4 mt-3">
-                                <div class="category-card h-100">
-                                    <div class="category-header">
-                                        <div class="category-icon" style="background-color: <?= $category['color'] ?>">
-                                            <i class="<?= $category['icon'] ?>"></i>
-                                        </div>
-                                        <div class="category-count">
-                                            <span class="count-number"><?= $postCount ?></span>
-                                            <span class="count-label">مقال</span>
-                                        </div>
-                                    </div>
-                                    <div class="category-body">
-                                        <h3 class="category-name"><?= htmlspecialchars($category['name']) ?></h3>
-                                        <a href="explore.php?category=<?= $category['id'] ?>" class="btn btn-sm btn-outline-primary mt-3">
-                                            <i class="fas fa-arrow-left me-1"></i>
-                                            تصفح التصنيف
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <!-- تذييل الصفحة -->

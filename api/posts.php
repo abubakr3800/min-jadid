@@ -101,9 +101,15 @@ function handleGet() {
 
 function handlePost() {
     global $db, $currentUser;
-    
-    $action = $_POST['action'] ?? '';
-    
+
+    // دعم استقبال action من JSON body أو من POST عادي
+    $input = [];
+    $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
+    if (stripos($contentType, 'application/json') !== false) {
+        $input = json_decode(file_get_contents('php://input'), true) ?: [];
+    }
+    $action = $_POST['action'] ?? $input['action'] ?? '';
+
     switch ($action) {
         case 'create':
             // Validate required fields
@@ -182,6 +188,38 @@ function handlePost() {
             } else {
                 http_response_code(500);
                 echo json_encode(['error' => 'حدث خطأ أثناء نشر المقال']);
+            }
+            break;
+            
+        case 'delete':
+            // Allow delete via POST (for JS compatibility)
+            $input = json_decode(file_get_contents('php://input'), true);
+            $postId = $input['postId'] ?? '';
+            if (empty($postId)) {
+                http_response_code(400);
+                echo json_encode(['error' => 'معرف المقال مطلوب']);
+                exit;
+            }
+            $post = $db->getPostById($postId);
+            if (!$post) {
+                http_response_code(404);
+                echo json_encode(['error' => 'المقال غير موجود']);
+                exit;
+            }
+            if ($post['userId'] !== $currentUser['id'] && !$db->isAdmin($currentUser['email'])) {
+                http_response_code(403);
+                echo json_encode(['error' => 'غير مصرح لك بحذف هذا المقال']);
+                exit;
+            }
+            $result = $db->deletePost($postId);
+            if ($result) {
+                echo json_encode([
+                    'success' => true,
+                    'message' => 'تم حذف المقال بنجاح'
+                ]);
+            } else {
+                http_response_code(500);
+                echo json_encode(['error' => 'حدث خطأ أثناء حذف المقال']);
             }
             break;
             
