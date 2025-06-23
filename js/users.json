@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "firstName": "أحمد",
+    "lastName": "محمود",
+    "email": "ahmed@example.com",
+    "password": "123456",
+    "createdAt": "2024-01-15"
+  },
+  {
+    "id": "2",
+    "firstName": "سارة",
+    "lastName": "أحمد",
+    "email": "sara@example.com",
+    "password": "123456",
+    "createdAt": "2024-01-20"
+  }
+] 

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار تسجيل الدخول البسيط</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-google {
+            background: #4285f4;
+            color: white;
+        }
+        
+        .btn-google:hover {
+            background: #3367d6;
+        }
+        
+        .btn-facebook {
+            background: #1877f2;
+            color: white;
+        }
+        
+        .btn-facebook:hover {
+            background: #166fe5;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اختبار تسجيل الدخول الاجتماعي</h1>
+        
+        <div class="warning">
+            <strong>⚠️ ملاحظة:</strong> هذا اختبار مؤقت لحل مشكلة Firebase Domain Authorization
+        </div>
+        
+        <div id="status" class="status info">
+            اختر طريقة تسجيل الدخول للاختبار
+        </div>
+        
+        <div>
+            <button class="btn btn-google" onclick="simulateGoogleAuth()">
+                <i class="fab fa-google"></i> محاكاة Google
+            </button>
+            <button class="btn btn-facebook" onclick="simulateFacebookAuth()">
+                <i class="fab fa-facebook-f"></i> محاكاة Facebook
+            </button>
+        </div>
+        
+        <div id="authForm" style="display: none; margin-top: 20px;">
+            <h3>إدخال بيانات المستخدم</h3>
+            <div class="form-group">
+                <label>الاسم:</label>
+                <input type="text" id="userName" placeholder="أدخل اسمك">
+            </div>
+            <div class="form-group">
+                <label>البريد الإلكتروني:</label>
+                <input type="email" id="userEmail" placeholder="أدخل بريدك الإلكتروني">
+            </div>
+            <button class="btn btn-google" onclick="completeAuth()">إكمال تسجيل الدخول</button>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="login.php" class="btn" style="background: #6c757d; color: white;">العودة لصفحة تسجيل الدخول</a>
+        </div>
+    </div>
+
+    <script>
+        let currentProvider = '';
+        
+        function simulateGoogleAuth() {
+            currentProvider = 'google';
+            showStatus('تم اختيار Google - أدخل بياناتك للاختبار', 'info');
+            document.getElementById('authForm').style.display = 'block';
+            document.getElementById('userName').placeholder = 'مثال: أحمد محمد';
+            document.getElementById('userEmail').placeholder = 'مثال: ahmed@gmail.com';
+        }
+        
+        function simulateFacebookAuth() {
+            currentProvider = 'facebook';
+            showStatus('تم اختيار Facebook - أدخل بياناتك للاختبار', 'info');
+            document.getElementById('authForm').style.display = 'block';
+            document.getElementById('userName').placeholder = 'مثال: أحمد محمد';
+            document.getElementById('userEmail').placeholder = 'مثال: ahmed@facebook.com';
+        }
+        
+        function completeAuth() {
+            const name = document.getElementById('userName').value.trim();
+            const email = document.getElementById('userEmail').value.trim();
+            
+            if (!name || !email) {
+                showStatus('يرجى ملء جميع الحقول', 'error');
+                return;
+            }
+            
+            if (!email.includes('@')) {
+                showStatus('يرجى إدخال بريد إلكتروني صحيح', 'error');
+                return;
+            }
+            
+            // محاكاة بيانات المستخدم من Firebase
+            const userData = {
+                uid: 'test_' + Date.now(),
+                email: email,
+                displayName: name,
+                photoURL: '',
+                provider: currentProvider
+            };
+            
+            showStatus('جاري إرسال البيانات إلى الخادم...', 'info');
+            
+            // إرسال البيانات إلى API
+            fetch('api/social-auth.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showStatus(`
+                        <h3>✅ تم تسجيل الدخول بنجاح!</h3>
+                        <p><strong>الاسم:</strong> ${name}</p>
+                        <p><strong>البريد الإلكتروني:</strong> ${email}</p>
+                        <p><strong>المزود:</strong> ${currentProvider}</p>
+                        <p>سيتم توجيهك إلى الصفحة الرئيسية خلال 3 ثوان...</p>
+                    `, 'success');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'index.php';
+                    }, 3000);
+                } else {
+                    showStatus('فشل في تسجيل الدخول: ' + (data.error || 'خطأ غير معروف'), 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showStatus('حدث خطأ في الاتصال بالخادم', 'error');
+            });
+        }
+        
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = message;
+            statusDiv.className = `status ${type}`;
+        }
+    </script>
+</body>
+</html> 

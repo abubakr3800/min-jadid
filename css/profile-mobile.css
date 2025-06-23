@@ -1,0 +1,860 @@
+/* 
+* profile-mobile.css - ملف الاستجابة للهواتف المحمولة لصفحة الملف الشخصي
+* 
+* هذا الملف يحتوي على أنماط خاصة بصفحة الملف الشخصي للهواتف المحمولة
+*/
+
+/* الأجهزة الصغيرة جداً (الهواتف المحمولة، أقل من 768px) */
+@media (max-width: 767.98px) {
+  /* تحسينات رأس الملف الشخصي */
+  .profile-header .card {
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .profile-header .card-body {
+    padding: var(--spacing-md);
+  }
+  
+  .profile-header .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-header .col-md-3,
+  .profile-header .col-md-9 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .profile-header .col-md-3 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* تحسينات الصورة الشخصية */
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  
+  .avatar-img,
+  .avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+  
+  /* تحسينات معلومات الملف الشخصي */
+  .profile-name {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .profile-bio {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .profile-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  .meta-item i {
+    width: 16px;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  /* تحسينات أزرار الملف الشخصي */
+  .profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .profile-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* تحسينات قسم المقالات */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  
+  /* تحسينات شبكة البطاقات */
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .post-card {
+    margin: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .post-card-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .post-author {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .author-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .post-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  
+  .post-category {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .category-badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  /* تحسينات محتوى المقال */
+  .post-content {
+    padding: var(--spacing-md);
+  }
+  
+  .post-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+  }
+  
+  .post-excerpt {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  
+  /* تحسينات معلومات المقال */
+  .post-meta {
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  
+  .post-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+  
+  .stars i {
+    font-size: 0.7rem;
+  }
+  
+  .post-views {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  /* تحسينات أزرار المقال */
+  .post-actions {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .post-actions .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* تحسينات الحالة الفارغة */
+  .empty-state {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .empty-icon {
+    font-size: 3rem;
+    color: var(--text-muted);
+  }
+  
+  .empty-state h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .empty-state p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .empty-state .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  /* تحسينات إضافية للهواتف */
+  .container {
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+  }
+  
+  .main-content {
+    padding-top: var(--spacing-md);
+  }
+  
+  .navbar {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .navbar-brand img {
+    height: 32px;
+  }
+  
+  .navbar-nav {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  /* تحسينات النوافذ المنبثقة */
+  .modal-dialog {
+    margin: var(--spacing-sm);
+    max-width: calc(100% - 2rem);
+  }
+  
+  .modal-content {
+    border-radius: var(--border-radius);
+  }
+  
+  .modal-header {
+    padding: var(--spacing-md);
+  }
+  
+  .modal-body {
+    padding: var(--spacing-md);
+  }
+  
+  .modal-footer {
+    padding: var(--spacing-md);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
+  
+  /* تحسينات خاصة بنافذة تعديل الملف الشخصي */
+  .modal-dialog.modal-lg {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+  
+  /* إصلاح مشكلة التمرير في النافذة المنبثقة */
+  .modal-dialog.modal-dialog-scrollable {
+    max-height: 90vh;
+    margin: 1rem auto;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-content {
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-body {
+    overflow-y: auto !important;
+    flex: 1;
+    padding: var(--spacing-md);
+    max-height: none !important;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-footer {
+    flex-shrink: 0;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-color);
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* تحسينات إضافية للتمرير */
+  .modal-body::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .modal-body::-webkit-scrollbar-track {
+    background: var(--border-color);
+    border-radius: 3px;
+  }
+  
+  .modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+  }
+  
+  .modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* تحسينات حقول النموذج */
+  .form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .form-control {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
+  }
+  
+  .form-control::placeholder {
+    color: var(--text-muted);
+  }
+  
+  /* تحسينات منطقة الصورة الشخصية */
+  .avatar-drop-zone {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px dashed var(--border-color);
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+  }
+  
+  .avatar-drop-zone:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  .avatar-drop-zone.dragover {
+    border-color: var(--primary-color);
+    background-color: rgba(var(--primary-rgb), 0.1);
+    transform: scale(1.1);
+  }
+  
+  #avatarPreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+  
+  .avatar-drop-zone:hover .avatar-overlay {
+    opacity: 1;
+  }
+  
+  .avatar-overlay i {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .avatar-overlay span {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+  
+  #editAvatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* تحسينات الأزرار */
+  .btn {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+    transform: translateY(-1px);
+  }
+  
+  /* تحسينات الرسائل */
+  #editProfileMsg {
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  #editProfileMsg.success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #28a745;
+  }
+  
+  #editProfileMsg.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #dc3545;
+  }
+  
+  #avatarError {
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+    color: #dc3545;
+    text-align: center;
+  }
+  
+  /* تحسينات الإشعارات */
+  .toast-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    z-index: 9999;
+    max-width: none;
+  }
+  
+  .toast {
+    margin-bottom: var(--spacing-sm);
+    border-radius: var(--border-radius);
+  }
+  
+  /* تحسينات الشبكة للشاشات الصغيرة */
+  .row .col-md-6 {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .row .col-md-6:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* الأجهزة الصغيرة جداً (الهواتف الصغيرة، أقل من 576px) */
+@media (max-width: 575.98px) {
+  .profile-header .card-body {
+    padding: var(--spacing-sm);
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-img,
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  
+  .profile-name {
+    font-size: 1.3rem;
+  }
+  
+  .profile-bio {
+    font-size: 0.85rem;
+  }
+  
+  .meta-item {
+    font-size: 0.85rem;
+  }
+  
+  .post-card-header,
+  .post-content,
+  .post-actions {
+    padding: var(--spacing-sm);
+  }
+  
+  .post-title {
+    font-size: 1rem;
+  }
+  
+  .post-excerpt {
+    font-size: 0.85rem;
+  }
+  
+  .post-meta {
+    padding: 0 var(--spacing-sm);
+    font-size: 0.75rem;
+  }
+  
+  .post-actions .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .container {
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+  }
+  
+  .toast-container {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+/* تحسينات للشاشات المتوسطة (أجهزة اللوحية) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .profile-header .row {
+    align-items: flex-start;
+  }
+  
+  .profile-header .col-md-3 {
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+  }
+  
+  .avatar-img,
+  .avatar-placeholder {
+    width: 140px;
+    height: 140px;
+    font-size: 3.5rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .post-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .post-actions .btn {
+    width: auto;
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة */
+@media (min-width: 992px) {
+  .profile-header .row {
+    align-items: center;
+  }
+  
+  .profile-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .avatar-img,
+  .avatar-placeholder {
+    width: 160px;
+    height: 160px;
+    font-size: 4rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .post-actions {
+    flex-direction: row;
+  }
+  
+  .post-actions .btn {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* تحسينات عامة للتفاعل */
+@media (hover: hover) {
+  .post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .avatar-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* تحسينات للشاشات المظلمة */
+@media (prefers-color-scheme: dark) {
+  .post-card {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--dark-border-color);
+  }
+  
+  .post-card-header,
+  .post-actions {
+    border-color: var(--dark-border-color);
+  }
+}
+
+/* تحسينات للحركة المقللة */
+@media (prefers-reduced-motion: reduce) {
+  .post-card,
+  .btn {
+    transition: none;
+  }
+  
+  .post-card:hover {
+    transform: none;
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+  .modal-dialog.modal-lg {
+    max-width: 100%;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-content {
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-body {
+    max-height: calc(100vh - 140px);
+    padding: var(--spacing-sm);
+  }
+  
+  .modal-header {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .modal-footer {
+    padding: var(--spacing-sm);
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-color);
+    position: sticky;
+    bottom: 0;
+  }
+  
+  .form-control {
+    padding: 1rem;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+  
+  .btn {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .btn:last-child {
+    margin-bottom: 0;
+  }
+  
+  .avatar-drop-zone {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .avatar-overlay i {
+    font-size: 1.2rem;
+  }
+  
+  .avatar-overlay span {
+    font-size: 0.6rem;
+  }
+}
+
+/* تحسينات للشاشات في الوضع الأفقي */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal-dialog.modal-lg {
+    max-width: 90%;
+    margin: 0.5rem auto;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-content {
+    max-height: 90vh;
+  }
+  
+  .modal-dialog.modal-dialog-scrollable .modal-body {
+    max-height: calc(90vh - 120px);
+  }
+  
+  .avatar-drop-zone {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+  .form-control {
+    font-size: 16px;
+  }
+  
+  .btn {
+    font-size: 16px;
+  }
+}
+
+/* تحسينات للشاشات التي تدعم اللمس */
+@media (hover: none) and (pointer: coarse) {
+  .form-control {
+    min-height: 44px; /* Minimum touch target size */
+  }
+  
+  .btn {
+    min-height: 44px;
+  }
+  
+  .avatar-drop-zone {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* تحسينات رسائل النجاح */
+#editProfileMsg.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #28a745;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* تحسينات رسائل الخطأ */
+#editProfileMsg.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #dc3545;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+} 

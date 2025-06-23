@@ -1,0 +1,68 @@
+[
+    {
+        "id": "1",
+        "firstName": "أحمد",
+        "lastName": "محمود",
+        "email": "ahmed@example.com",
+        "password": "123456",
+        "linkedin": "https:\/\/linkedin.com\/in\/ahmed-mahmoud",
+        "bio": "مدرب تطوير ذاتي ومتحدث تحفيزي",
+        "avatar": "img\/avatars\/ahmed.jpg",
+        "createdAt": "2024-01-15"
+    },
+    {
+        "id": "2",
+        "firstName": "سارة",
+        "lastName": "أحمد",
+        "email": "sara@example.com",
+        "password": "123456",
+        "linkedin": "https:\/\/linkedin.com\/in\/sara-ahmed",
+        "bio": "خبيرة في مجال الأعمال والقيادة",
+        "avatar": "img\/avatars\/sara.jpg",
+        "createdAt": "2024-01-20"
+    },
+    {
+        "id": "3",
+        "firstName": "محمد",
+        "lastName": "علي",
+        "email": "mohamed@example.com",
+        "password": "123456",
+        "linkedin": "https:\/\/linkedin.com\/in\/mohamed-ali",
+        "bio": "كاتب وفيلسوف معاصر",
+        "avatar": "img\/avatars\/mohamed.jpg",
+        "createdAt": "2024-01-22"
+    },
+    {
+        "firstName": "Ahmed",
+        "lastName": "Mohamed Abubakr",
+        "email": "ahmed.mo.abubakr@gmail.com",
+        "password": "123456",
+        "linkedin": "https:\/\/www.linkedin.com\/in\/ahmed-abubakr-a27b7a278\/",
+        "bio": "",
+        "id": "4",
+        "createdAt": "2025-06-17",
+        "avatar": "img\/avatars\/user_4_1750633991.png",
+        "isAdmin": true,
+        "adminRole": "super_admin",
+        "adminPermissions": {
+            "delete_any_post": true,
+            "view_all_users": true,
+            "manage_users": true,
+            "manage_categories": true,
+            "view_analytics": true
+        }
+    },
+    {
+        "id": "5",
+        "firstName": "ahmed",
+        "lastName": "abubakr",
+        "email": "ahhmedabubakr1482@gmail.com",
+        "password": "",
+        "linkedin": "",
+        "bio": "",
+        "avatar": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKMRKP0X8yaYfl_W701VG2cU3c2s8tdEtu7I7HbTKTZUs98Hg=s96-c",
+        "createdAt": "2025-06-19",
+        "authProvider": "google",
+        "firebaseUid": "j0ROn5Mndiar1Or1EEdfdgMg15v1"
+    }
+]

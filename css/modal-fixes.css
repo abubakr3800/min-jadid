@@ -1,0 +1,821 @@
+/* Edit Profile Modal Design Fixes */
+
+/* Modal Container */
+#editProfileModal .modal-dialog {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+#editProfileModal .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Modal Header */
+#editProfileModal .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+}
+
+#editProfileModal .modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#editProfileModal .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+#editProfileModal .btn-close:hover {
+  opacity: 1;
+}
+
+/* Modal Body */
+#editProfileModal .modal-body {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+}
+
+/* Form Controls */
+#editProfileModal .form-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+#editProfileModal .form-control {
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+#editProfileModal .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+#editProfileModal .form-control::placeholder {
+  color: #a0aec0;
+}
+
+/* Avatar Upload Container */
+.avatar-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Avatar Drop Zone */
+.avatar-drop-zone {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px dashed #cbd5e0;
+  background: #f7fafc;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-drop-zone:hover {
+  border-color: #667eea;
+  background: #edf2f7;
+  transform: scale(1.05);
+}
+
+.avatar-drop-zone.dragover {
+  border-color: #667eea;
+  background: #e6fffa;
+  transform: scale(1.1);
+}
+
+.avatar-drop-zone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.avatar-drop-zone:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.avatar-overlay i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar-overlay span {
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.3;
+}
+
+.avatar-drop-zone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Avatar Upload Info */
+.avatar-upload-info {
+  text-align: center;
+  max-width: 300px;
+}
+
+.avatar-upload-info small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Modal Footer */
+#editProfileModal .modal-footer {
+  border-top: 1px solid #e2e8f0;
+  padding: 1.5rem 2rem;
+  background: white;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+#editProfileModal .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#editProfileModal .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+#editProfileModal .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+#editProfileModal .btn-secondary {
+  background: #e2e8f0;
+  border: none;
+  color: #4a5568;
+}
+
+#editProfileModal .btn-secondary:hover {
+  background: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* Avatar Cropper Modal */
+#avatarCropperModal .modal-dialog {
+  max-width: 500px;
+}
+
+#avatarCropperModal .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+#avatarCropperModal .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+}
+
+#avatarCropperModal .modal-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cropper-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cropper-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cropper-instructions {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.cropper-instructions p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #editProfileModal .modal-dialog {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+  
+  #editProfileModal .modal-body {
+    padding: 1.5rem;
+  }
+  
+  #editProfileModal .modal-footer {
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+  
+  #editProfileModal .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .avatar-drop-zone {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .avatar-overlay i {
+    font-size: 1.5rem;
+  }
+  
+  .avatar-overlay span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #editProfileModal .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  #editProfileModal .modal-content {
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  #editProfileModal .modal-body {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .avatar-drop-zone {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Error Messages */
+#avatarError {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #feb2b2;
+  font-size: 0.875rem;
+}
+
+/* Success Messages */
+#editProfileMsg {
+  background: #c6f6d5;
+  color: #22543d;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #9ae6b4;
+  font-size: 0.875rem;
+}
+
+/* Loading States */
+.avatar-drop-zone.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.avatar-drop-zone.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #667eea;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Modal and Navbar Fixes */
+
+/* Fix navbar dropdown background */
+.navbar-nav {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.navbar-nav.show {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Ensure navbar dropdown content is visible */
+.navbar-nav .nav-link {
+    color: #333333 !important;
+    background-color: transparent !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #f8f9fa !important;
+    color: #000000 !important;
+}
+
+/* Fix any potential transparency issues */
+.navbar-nav::before,
+.navbar-nav::after {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+}
+
+/* Enhanced Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: modalSlideIn 0.3s ease-out forwards;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+    border-radius: 20px 20px 0 0;
+    z-index: -1;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body {
+    padding: 2rem;
+    background: #ffffff;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+    color: white;
+}
+
+/* Avatar Drop Zone Styles */
+.avatar-drop-zone {
+    border: 3px dashed #667eea;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-drop-zone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.avatar-drop-zone:hover::before {
+    left: 100%;
+}
+
+.avatar-drop-zone:hover {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, #f0f2ff 0%, #e8ebff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.avatar-drop-zone.dragover {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, #e8ebff 0%, #dde2ff 100%);
+    transform: scale(1.02);
+}
+
+.avatar-drop-zone .upload-icon {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.avatar-drop-zone .upload-text {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.avatar-drop-zone .upload-hint {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Form Enhancements */
+.modal .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.modal .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.modal .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.modal .form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    background: #ffffff;
+}
+
+.modal .form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* Button Enhancements */
+.modal .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.modal .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.modal .btn-primary:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.modal .btn-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+}
+
+.modal .btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+}
+
+.modal .btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.modal .btn-danger:hover {
+    background: linear-gradient(135deg, #c82333 0%, #a71e2a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+        max-height: 95vh;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.25rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-footer {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .close {
+        right: 1rem;
+        top: 1rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+    
+    .avatar-drop-zone {
+        padding: 2rem 1rem;
+    }
+    
+    .avatar-drop-zone .upload-icon {
+        font-size: 2.5rem;
+    }
+    
+    .avatar-drop-zone .upload-text {
+        font-size: 1rem;
+    }
+    
+    .avatar-drop-zone .upload-hint {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 98%;
+        margin: 0.5rem;
+        border-radius: 15px;
+    }
+    
+    .modal-header {
+        border-radius: 15px 15px 0 0;
+        padding: 0.75rem;
+    }
+    
+    .modal-header::before {
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .modal-title {
+        font-size: 1.1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-footer {
+        border-radius: 0 0 15px 15px;
+        padding: 0.75rem;
+    }
+    
+    .close {
+        right: 0.75rem;
+        top: 0.75rem;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .avatar-drop-zone {
+        padding: 1.5rem 0.75rem;
+        border-radius: 15px;
+    }
+    
+    .avatar-drop-zone .upload-icon {
+        font-size: 2rem;
+    }
+    
+    .avatar-drop-zone .upload-text {
+        font-size: 0.9rem;
+    }
+    
+    .avatar-drop-zone .upload-hint {
+        font-size: 0.8rem;
+    }
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Loading States */
+.modal .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success/Error States */
+.modal .form-control.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.modal .form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.modal .invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.modal .valid-feedback {
+    display: block;
+    color: #28a745;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+} 

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "التحفيز والإلهام",
+    "name_en": "Motivation & Inspiration",
+    "color": "#4CAF50",
+    "icon": "fas fa-lightbulb"
+  },
+  {
+    "id": "2", 
+    "name": "النجاح والتطوير",
+    "name_en": "Success & Development",
+    "color": "#2196F3",
+    "icon": "fas fa-chart-line"
+  },
+  {
+    "id": "3",
+    "name": "الحياة والفلسفة",
+    "name_en": "Life & Philosophy", 
+    "color": "#9C27B0",
+    "icon": "fas fa-heart"
+  },
+  {
+    "id": "4",
+    "name": "الأعمال والقيادة",
+    "name_en": "Business & Leadership",
+    "color": "#FF9800",
+    "icon": "fas fa-briefcase"
+  },
+  {
+    "id": "5",
+    "name": "التعليم والمعرفة",
+    "name_en": "Education & Knowledge",
+    "color": "#607D8B",
+    "icon": "fas fa-graduation-cap"
+  },
+  {
+    "id": "6",
+    "name": "اسلاميات",
+    "name_en": "Islamic",
+    "color": "#2E7D32",
+    "icon": "fas fa-mosque"
+  },
+  {
+    "id": "7",
+    "name": "انتاجية",
+    "name_en": "Productivity",
+    "color": "#1976D2",
+    "icon": "fas fa-tasks"
+  },
+  {
+    "id": "8",
+    "name": "كتب ومصادر",
+    "name_en": "Books & Resources",
+    "color": "#7B1FA2",
+    "icon": "fas fa-book"
+  }
+] 

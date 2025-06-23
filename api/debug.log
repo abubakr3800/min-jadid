@@ -1,0 +1,1414 @@
+2025-06-17T19:09:11+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [id] => 1
+                    [firstName] => أحمد
+                    [lastName] => محمود
+                    [email] => ahmed@example.com
+                    [linkedin] => https://linkedin.com/in/ahmed-mahmoud
+                    [bio] => مدرب تطوير ذاتي ومتحدث تحفيزي
+                    [avatar] => img/avatars/ahmed.jpg
+                    [createdAt] => 2024-01-15
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 1
+            [userId] => 1
+            [comment] => ..
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-17T19:09:16+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [id] => 1
+                    [firstName] => أحمد
+                    [lastName] => محمود
+                    [email] => ahmed@example.com
+                    [linkedin] => https://linkedin.com/in/ahmed-mahmoud
+                    [bio] => مدرب تطوير ذاتي ومتحدث تحفيزي
+                    [avatar] => img/avatars/ahmed.jpg
+                    [createdAt] => 2024-01-15
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 1
+            [userId] => 1
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-17T19:32:58+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 5
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-17T19:33:58+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 2
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-17T19:35:34+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 2
+            [userId] => 4
+            [comment] => 333
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-17T19:38:07+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 2
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:05:08+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 2
+            [userId] => 4
+            [comment] => aa
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:05:32+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 2
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:05:45+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 2
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:05:47+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 2
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:06:29+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => dcfc;ad
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:06:43+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => la;l;s
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:11:18+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:11:33+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => dddd
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:11:43+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:11:51+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:11:58+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => ;
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:30:22+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:30:26+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:40:01+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T02:40:21+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => rate
+            [postId] => 4
+            [userId] => 4
+            [rating] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T03:56:50+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => like
+            [postId] => 4
+            [userId] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T03:56:56+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => rate
+            [postId] => 4
+            [userId] => 4
+            [rating] => 4
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T03:57:07+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => 555
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T04:34:27+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => rate
+            [postId] => 4
+            [userId] => 4
+            [rating] => 3
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-18T04:34:48+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 4
+            [userId] => 4
+            [comment] => sss
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-19T03:00:42+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 2
+            [userId] => 4
+            [comment] => adsds
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-19T03:00:45+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => comment
+            [postId] => 2
+            [userId] => 4
+            [comment] => adsds
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-19T03:08:16+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+            [action] => create
+            [userId] => 4
+            [title] => Advanced PHP Techniques
+            [content] => fdsfsdf
+            [category] => النجاح والتطوير
+            [tags] => 
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-19T04:06:25+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [id] => 5
+                    [firstName] => ahmed
+                    [lastName] => abubakr
+                    [email] => ahhmedabubakr1482@gmail.com
+                    [password] => 
+                    [linkedin] => 
+                    [bio] => 
+                    [avatar] => https://lh3.googleusercontent.com/a/ACg8ocKMRKP0X8yaYfl_W701VG2cU3c2s8tdEtu7I7HbTKTZUs98Hg=s96-c
+                    [createdAt] => 2025-06-19
+                    [authProvider] => google
+                    [firebaseUid] => j0ROn5Mndiar1Or1EEdfdgMg15v1
+                )
+
+            [logged_in] => 1
+            [auth_provider] => google
+            [firebase_uid] => j0ROn5Mndiar1Or1EEdfdgMg15v1
+        )
+
+    [post] => Array
+        (
+            [action] => create
+            [userId] => 5
+            [title] => Advanced PHP Techniques
+            [content] => ffdgfdf
+            [category] => النجاح والتطوير
+            [tags] => 
+        )
+
+    [method] => POST
+)
+
+---
+2025-06-22T00:09:27+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T15:23:04+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [id] => 5
+                    [firstName] => ahmed
+                    [lastName] => abubakr
+                    [email] => ahhmedabubakr1482@gmail.com
+                    [linkedin] => 
+                    [bio] => 
+                    [avatar] => 
+                    [createdAt] => 2025-06-19
+                    [authProvider] => google
+                    [firebaseUid] => test_1750598566711_4rhgq8dto
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:52:52+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:52:55+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:52:59+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:01+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:04+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:08+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:11+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:14+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:18+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-22T16:53:21+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750547110.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
+2025-06-23T05:08:07+02:00
+Array
+(
+    [session] => Array
+        (
+            [user] => Array
+                (
+                    [firstName] => Ahmed
+                    [lastName] => Mohamed Abubakr
+                    [email] => ahmed.mo.abubakr@gmail.com
+                    [linkedin] => https://www.linkedin.com/in/ahmed-abubakr-a27b7a278/
+                    [bio] => 
+                    [id] => 4
+                    [createdAt] => 2025-06-17
+                    [avatar] => img/avatars/user_4_1750633991.png
+                    [isAdmin] => 1
+                    [adminRole] => super_admin
+                    [adminPermissions] => Array
+                        (
+                            [delete_any_post] => 1
+                            [view_all_users] => 1
+                            [manage_users] => 1
+                            [manage_categories] => 1
+                            [view_analytics] => 1
+                        )
+
+                )
+
+            [logged_in] => 1
+        )
+
+    [post] => Array
+        (
+        )
+
+    [method] => DELETE
+)
+
+---
